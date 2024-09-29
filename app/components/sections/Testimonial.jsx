@@ -109,7 +109,9 @@ const Testimonial = () => {
                   <p className="text-[#B8336A] font-medium text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                     “
                   </p>
-                  <p className="text-lg italic mb-4">"{testimonial.text}"</p>
+                  <p className="text-lg italic mb-4">
+                    &ldquo; {testimonial.text} &rdquo;
+                  </p>
                 </div>
                 <div className="flex items-center space-x-4 ">
                   <Image
