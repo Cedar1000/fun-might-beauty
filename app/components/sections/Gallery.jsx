@@ -90,7 +90,7 @@ const FeaturedGallery = () => {
               <Image
                 src={image.src}
                 alt={image.alt}
-                layout="fill"
+                font-bold"fill"
                 objectFit="cover"
                 className="rounded-lg"
               />

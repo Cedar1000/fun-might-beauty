@@ -13,7 +13,7 @@ export default function Home() {
     <div className="bg-[#FEEDEC]">
       {/* Hero Section */}
       <section className="md:flex flex-row-reverse justify-between items-center px-8 py-12 md:pb-0 lg:mx-14 xl:ml-[125px] xl:mr-[125px]">
-        <div className="relative  w-72 h-96 md:w-[350px] md:h-[500px]">
+        <div className="relative  w-72 h-96 md:w-[350px] md:h-[500px] xl:w-[500px] xl:h-[763px]">
           <Image src={banner} alt="Beauty" layout="fill" className=" " />
         </div>
         <div className="mt-5 md:mt-0 self-start">
@@ -63,7 +63,9 @@ export default function Home() {
       </div>
       {/* Working Section */}
       <div>
-        <WorkingHours />
+        <WorkingHours
+          imageClass={`flex justify-center xl:justify-between self-end`}
+        />
       </div>
       {/* Testimonial Section */}
       <div>

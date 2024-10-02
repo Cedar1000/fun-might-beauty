@@ -11,7 +11,7 @@ const Service = () => {
       <section className="grid lg:flex  relative justify-center items-center mt-[98px] ">
         <div className="absolute left-20 lg:left-0 xl:left-20 w-[50%] md:w-[40%] h-full lg:h-[680px] bg-[#FDE4D4] rounded-tl-[180px]  "></div>
         <aside className="z-10 lg:ml-9">
-          <div className="flex items-stretch ">
+          <div className="flex items-stretch h-[287px]">
             <div className="bg-[#FFF3F2] pl-3 pt-14 pb-12 rounded-tl-[52px] w-[230px] rounded-br-[52px] shadow-lg flex flex-col justify-between">
               <h3 className="text-2xl font-medium mt-4 w-[169px]">
                 Instant Dreadlocks
@@ -28,7 +28,7 @@ const Service = () => {
               className="rounded-bl-[52px] rounded-br-[52px] w-[200px] md:w-[230px] object-cover"
             />
           </div>
-          <div className="flex items-stretch ">
+          <div className="flex items-stretch h-[287px]">
             <Image
               src={image3}
               alt="Wig Insallation"
@@ -48,7 +48,7 @@ const Service = () => {
         </aside>
 
         <aside className="z-10">
-          <div className="flex items-stretch ">
+          <div className="flex items-stretch h-[287px]">
             <div className="bg-[#FFF3F2] pl-3 pt-14 pb-12 rounded-bl-[52px] rounded-br-[52px] w-[230px] shadow-lg flex flex-col justify-between">
               <h3 className="text-2xl font-medium mt-4 w-[169px]">Braiding</h3>
               <p className="text-gray-600 mt-2 text-xl">
@@ -64,7 +64,7 @@ const Service = () => {
               className="rounded-bl-[52px] rounded-tr-[52px] w-[200px] md:w-[230px] object-cover"
             />
           </div>
-          <div className="flex items-stretch ">
+          <div className="flex items-stretch h-[287px]">
             <Image
               src={image4}
               alt="Wig Coloring"
