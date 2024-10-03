@@ -1,6 +1,6 @@
 import { Noto_Serif, Open_Sans } from "next/font/google";
 import "./globals.css";
-import ClientLayout from "./components/layout/ClientLayout";
+import ClientLayout from "./components/layout/GlobalProvider";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 

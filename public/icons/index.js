@@ -10,5 +10,7 @@ import forward from './forward.svg';
 import instagram from './instagram.svg';
 import facebook from './facebook.svg';
 import tiktok from './tiktok.svg';
+import home from './home.svg';
+import greater from './greater.svg';
 
-export { close, menu, logo, cart, search, profile, back, forward, instagram, facebook, tiktok, cartPlus };
+export { close, menu, logo, cart, search, profile, back, forward, instagram, facebook, tiktok, cartPlus, home, greater,};

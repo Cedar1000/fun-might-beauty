@@ -1,5 +1,15 @@
-export const intlMoneyFormat = (amount) => {
-  if (!amount) return 0.0;
+// export const intlMoneyFormat = (amount) => {
+//   if (!amount) return 0.0;
 
-  return new Intl.NumberFormat().format(amount);
+//   return new Intl.NumberFormat().format(amount);
+// };
+
+
+export const intlMoneyFormat = (amount) => {
+  if (!amount) return "0.00";
+
+  return new Intl.NumberFormat(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(amount);
 };

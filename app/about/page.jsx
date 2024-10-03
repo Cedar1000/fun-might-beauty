@@ -39,8 +39,9 @@ const AboutUs = () => {
           Bringing your beauty to life
         </h1>
         <p className="text-[#272424] md:text-2xl mt-8">
-          "At funMight Beauty, we're committed to providing exceptional beauty
-          services and creating a relaxing and welcoming atmosphere."
+          &ldquo; At funMight Beauty, we&apos;re committed to providing
+          exceptional beauty services and creating a relaxing and welcoming
+          atmosphere. &rdquo;
         </p>
       </section>
       <section
