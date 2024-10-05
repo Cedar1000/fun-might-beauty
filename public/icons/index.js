@@ -12,5 +12,6 @@ import facebook from './facebook.svg';
 import tiktok from './tiktok.svg';
 import home from './home.svg';
 import greater from './greater.svg';
+import trash from './trash.svg';
 
-export { close, menu, logo, cart, search, profile, back, forward, instagram, facebook, tiktok, cartPlus, home, greater,};
+export { close, menu, logo, cart, search, profile, back, forward, instagram, facebook, tiktok, cartPlus, home, greater, trash};

@@ -1,9 +1,10 @@
 // app/cart/CartItem.jsx
-"use client"; // Enable client-side interactivity
+"use client"; 
 
 import { intlMoneyFormat } from "@/utils/helpers";
 import Image from "next/image";
 import { useState } from "react";
+import { trash } from "@/public/icons";
 
 const CartItem = ({ item, updateQuantity }) => {
   const [quantity, setQuantity] = useState(item.quantity);
@@ -24,46 +25,50 @@ const CartItem = ({ item, updateQuantity }) => {
 
   return (
     <tr className="border-b">
-      <td className="py-4">
+      <td className="py-4  w-[50%]">
         <div className="flex items-center">
-          {/* Use Next.js Image component */}
-          <Image
-            src={item.image}
-            alt={item.name}
-            width={64}
-            height={64}
-            className="object-cover rounded" 
-          />
-          <div className="ml-4">
-            <p className="text-lg">{item.name}</p>
-            <p className="text-gray-500">£{intlMoneyFormat(item.price)}</p>
+          <div className="bg-[#FEEDEC]">
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={64}
+              height={140}
+              className="object-cover rounded"
+            />
+          </div>
+
+          <div className="ml-2 md:ml-4">
+            <p className="md:text-lg lg:text-xl font-semibold">{item.name}</p>
+            <p className="text-primary text-sm md:text-base">{intlMoneyFormat(item.price)}</p>
           </div>
         </div>
       </td>
-      <td className="py-4">
+      <td className="py-4 ">
         <div className="flex items-center space-x-2">
-          <button
-            onClick={decreaseQuantity}
-            className="px-2 py-1 bg-gray-200 rounded"
-          >
-            -
-          </button>
-          <input
-            type="text"
-            value={quantity}
-            readOnly
-            className="w-12 text-center border rounded"
+          <div className="flex items-center space-x-2 border md:text-xl md:px-5 md:py-2 border-primary rounded">
+            <button onClick={increaseQuantity} className="px-2 py-1 ">
+              +
+            </button>
+            <input
+              type="text"
+              value={quantity}
+              readOnly
+              className="w-12 text-center "
+            />
+            <button onClick={decreaseQuantity} className="px-2 py-1 ">
+              -
+            </button>
+          </div>
+          <Image
+            src={trash}
+            alt="trash-can"
+            width={14}
+            height={14}
+            className="cursor-pointer"
           />
-          <button
-            onClick={increaseQuantity}
-            className="px-2 py-1 bg-gray-200 rounded"
-          >
-            +
-          </button>
-          <button className="ml-4 text-red-600">🗑️</button>
         </div>
       </td>
-      <td className="py-4">£{intlMoneyFormat(item.price * quantity)}</td>
+      <td className="py-4 md:text-xl px-4">{intlMoneyFormat(item.price * quantity)}</td>
     </tr>
   );
 };

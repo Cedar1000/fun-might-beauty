@@ -1,6 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { cartPlus } from "@/public/icons"; 
+import Modal from "@/app/components/modals/Modal";
+import CartModal from "@/app/components/modals/CartModal";
 const ProductCard = ({ product }) => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
+   const handleAddToCartClick = () => {
+     setIsModalOpen(true);
+   };
   return (
     <div className="w-fit ">
       <div className="border border-[#272424] rounded-tr-lg rounded-tl-lg p-2 w-[240px] h-[244px]">
@@ -23,10 +33,14 @@ const ProductCard = ({ product }) => {
           <p className=" text-sm">{product.price}</p>
         </div>
       </div>
-      <button className="w-full bg-[#FF938C] py-2 text-[#4F4444] px-4  flex justify-center items-center space-x-2">
+      <button onClick={handleAddToCartClick} className="w-full bg-[#FF938C] py-2 text-[#4F4444] px-4  flex justify-center items-center space-x-2">
         <span> Add to Cart</span>
         <Image src={cartPlus} alt="icon" width={24} height={24} />
       </button>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <CartModal image={product.image} title={product.name} quantity={1} onClose={() => setIsModalOpen(false)} />
+      </Modal>
     </div>
   );
 };

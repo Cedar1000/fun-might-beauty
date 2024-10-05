@@ -231,7 +231,14 @@ const ProductsPage = () => {
 
 
   const products = {
-    all: allProducts.all.slice(0, showMore ? allProducts.all.length : 8),
+    all: [
+      ...allProducts.all,
+      // ...allProducts.bestSellers,
+      // ...allProducts.wigs,
+      // ...allProducts.hairAccessories,
+      // ...allProducts.hairExtensions,
+      // ...allProducts.hairProducts,
+    ], // Display all products or first 8
     "best sellers": allProducts.bestSellers,
     wigs: allProducts.wigs,
     "hair accessories": allProducts.hairAccessories,
@@ -242,7 +249,7 @@ const ProductsPage = () => {
   const handleSeeMore = () => setShowMore(!showMore);
 
   return (
-    <div className=" py-10 ">
+    <div className=" py-10 md:pb-20 lg:pb-[107px] ">
       <h1 className="text-center text-4xl lg:text-6xl xl:text-7xl font-medium mt-6 md:mt-14 lg:mt-24">
         Explore Our Products
       </h1>
@@ -258,13 +265,47 @@ const ProductsPage = () => {
       />
 
       {/* Product Grid */}
-      <div className="px-8 md:px-16 lg:px-28">
+      {/* <div className="px-8 md:px-16 lg:px-28">
+        <ProductGrid products={products[selectedCategory]} />
+        {selectedCategory === "all" && (
+          <div>
+            <div>All</div>
+            <ProductGrid products={products[selectedCategory]} />
+            <ProductGrid products={products[selectedCategory]} />
+          </div>
+        )}
+      </div> */}
 
-      <ProductGrid products={products[selectedCategory]} />
+      <div className="px-8 md:px-16 lg:px-28">
+        <div>
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-6 my-10 md:my-20 lg:my-[109px]">
+            {selectedCategory.charAt(0).toUpperCase() +
+              selectedCategory.slice(1)}{" "}
+            {selectedCategory === "all" && "Products"}
+          </h2>
+          <ProductGrid products={products[selectedCategory]} />
+        </div>
       </div>
+      {selectedCategory === "all" && (
+        <div>
+          {categories
+            .filter((category) => category !== "all") // Exclude 'all' from categories
+            .map((category) => (
+              <div
+                key={category}
+                className="mt-10 md:mt-[70px] border-t border-primary px-8 md:px-16 lg:px-28"
+              >
+                <h1 className="text-2xl lg:text-3xl font-semibold mb-6 my-10 md:my-20 lg:my-[109px]">
+                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                </h1>
+                <ProductGrid products={products[category]} />
+              </div>
+            ))}
+        </div>
+      )}
 
       {/* See More Button */}
-      {selectedCategory === "all" && (
+      {/* {selectedCategory === "all" && (
         <div className="text-center mt-8">
           <button
             className="px-6 py-2 bg-red-500 text-white font-medium rounded hover:bg-red-600"
@@ -273,7 +314,7 @@ const ProductsPage = () => {
             {showMore ? "Show Less" : "See More"}
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

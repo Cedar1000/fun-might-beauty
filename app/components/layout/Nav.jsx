@@ -74,10 +74,13 @@ const Nav = () => {
             <div className="flex items-center gap-4">
               <Image src={search} alt="logo" width={24} height={24} />
               <Image src={profile} alt="logo" width={24} height={24} />
-              <Image src={cart} alt="logo" width={24} height={24} />
+              <Link href="/cart">
+                {" "}
+                <Image src={cart} alt="logo" width={24} height={24} />
+              </Link>
             </div>
           )}
-          <Button className="px-6 py-4 hidden xl:block font-normal text-base">
+          <Button className={`px-6 py-4 hidden xl:block ${isProductRoute ? "hidden xl:hidden" : ""} font-normal text-base`}>
             Book an Appointment
           </Button>
         </div>
