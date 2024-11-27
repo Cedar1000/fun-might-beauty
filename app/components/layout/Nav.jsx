@@ -16,12 +16,14 @@ const Nav = () => {
   };
 
   const isProductRoute = pathname.startsWith("/product");
+    const shouldDisplayNavAndFooter =
+      pathname.startsWith("/signin") || pathname.startsWith("/signup");
 
   return (
     <nav
       className={`md:text-xl text-[#272424] md:px-9 px-4 lg:px-[100px] ${
         pathname === "/" ? "bg-[#FEEDEC]" : "bg-white bg-opacity-50 "
-      } `}
+      } ${shouldDisplayNavAndFooter ? "hidden" : ""} `}
     >
       <div
         className={`flex justify-between items-center ${

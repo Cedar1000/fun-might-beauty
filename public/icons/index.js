@@ -13,5 +13,8 @@ import tiktok from './tiktok.svg';
 import home from './home.svg';
 import greater from './greater.svg';
 import trash from './trash.svg';
+import funmight from './funmight.svg';
+import google from './google.svg';
+import apple from './apple.svg';
 
-export { close, menu, logo, cart, search, profile, back, forward, instagram, facebook, tiktok, cartPlus, home, greater, trash};
+export { close, menu, logo, cart, search, profile, back, forward, instagram, facebook, tiktok, cartPlus, home, greater, trash, funmight, google, apple };
