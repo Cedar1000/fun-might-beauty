@@ -1,17 +1,17 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { logo, instagram, facebook, tiktok } from "@/public/icons";
-import Button from "../element/Button";
-import { usePathname } from "next/navigation";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { logo, instagram, facebook, tiktok } from '@/public/icons';
+import Button from '../element/Button';
+import { usePathname } from 'next/navigation';
 export default function Footer() {
-    const pathname = usePathname();
-    const shouldDisplayNavAndFooter =
-      pathname.startsWith("/signin") || pathname.startsWith("/signup");
+  const pathname = usePathname();
+  const shouldDisplayNavAndFooter =
+    pathname.startsWith('/signin') || pathname.startsWith('/signup');
   return (
     <footer
       className={`bg-[#232121] text-[#FFF3F2] py-[47px] md:px-9 px-4 lg:px-[100px] ${
-        shouldDisplayNavAndFooter ? "hidden" : ""
+        shouldDisplayNavAndFooter ? 'hidden' : ''
       }`}
     >
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-10 lg:gap-20 xl:gap-[86px] items-center">
@@ -40,7 +40,9 @@ export default function Footer() {
           </div>
           <p className="mt-4 ">
             Email
-            <span className="block text-sm mt-2">funbnight@gmail.com</span>
+            <span className="block text-sm mt-2">
+              info@funmightbeauty.co.uk
+            </span>
           </p>
           <p className="mt-4 ">
             Phone
