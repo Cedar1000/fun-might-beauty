@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { workingImage } from '@/public/images';
 
-import { PopupButton } from 'react-calendly';
+// import { PopupButton } from 'react-calendly';
 
 import Button from '@/app/components/element/Button';
 
@@ -64,11 +64,11 @@ const WorkingHours = ({ className, imageClass, dimension }) => {
               Book an Appointment
             </Button>
 
-            <PopupButton
+            {/* <PopupButton
               url="https://calendly.com/funmightbeauty-info"
               rootElement={document.getElementById('__next')}
               text="Click here to schedule!"
-            />
+            /> */}
           </div>
         </div>
       </div>
