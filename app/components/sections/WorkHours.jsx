@@ -44,17 +44,17 @@ const WorkingHours = ({ className, imageClass, dimension }) => {
             {/* Working Hours Table */}
             <div className="text-primary text-lg md:text-xl lg:text-2xl ">
               <div className="flex justify-between py-2 border-b-2 border-primary">
-                <span>Mon to Thu </span>
+                <span>Sun to Sat </span>
                 <span>7am - 10pm</span>
               </div>
-              <div className="flex justify-between py-2 border-b-2 border-primary">
+              {/* <div className="flex justify-between py-2 border-b-2 border-primary">
                 <span>Fridays </span>
                 <span>7am - 1pm</span>
               </div>
               <div className="flex justify-between py-2 border-b-2 border-primary">
                 <span>Sat and Sun </span>
                 <span>Closed</span>
-              </div>
+              </div> */}
             </div>
           </div>
 

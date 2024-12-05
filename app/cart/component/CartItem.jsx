@@ -1,25 +1,32 @@
 // app/cart/CartItem.jsx
-"use client"; 
+'use client';
 
-import { intlMoneyFormat } from "@/utils/helpers";
-import Image from "next/image";
-import { useState } from "react";
-import { trash } from "@/public/icons";
+import { intlMoneyFormat } from '@/utils/helpers';
+import Image from 'next/image';
+import { useState } from 'react';
+import { trash } from '@/public/icons';
 
-const CartItem = ({ item, updateQuantity }) => {
+import { useCart } from '@/context/cartContext';
+
+const CartItem = ({ item, updateQuantity, deleteItem }) => {
+  const { increaseItem, decreaseItem } = useCart();
+
   const [quantity, setQuantity] = useState(item.quantity);
 
   const increaseQuantity = () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
-    updateQuantity(item.id, newQuantity); 
+    updateQuantity(item.id, newQuantity);
+    increaseItem(item.id);
   };
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
       const newQuantity = quantity - 1;
       setQuantity(newQuantity);
-      updateQuantity(item.id, newQuantity); 
+      updateQuantity(item.id, newQuantity);
+
+      decreaseItem(item.id);
     }
   };
 
@@ -39,7 +46,9 @@ const CartItem = ({ item, updateQuantity }) => {
 
           <div className="ml-2 md:ml-4">
             <p className="md:text-lg lg:text-xl font-semibold">{item.name}</p>
-            <p className="text-primary text-sm md:text-base">{intlMoneyFormat(item.price)}</p>
+            <p className="text-primary text-sm md:text-base">
+              {intlMoneyFormat(item.price)}
+            </p>
           </div>
         </div>
       </td>
@@ -65,10 +74,13 @@ const CartItem = ({ item, updateQuantity }) => {
             width={14}
             height={14}
             className="cursor-pointer"
+            onClick={() => deleteItem(item)}
           />
         </div>
       </td>
-      <td className="py-4 md:text-xl px-4">{intlMoneyFormat(item.price * quantity)}</td>
+      <td className="py-4 md:text-xl px-4">
+        {intlMoneyFormat(item.price * quantity)}
+      </td>
     </tr>
   );
 };

@@ -8,13 +8,11 @@ const LocationSection = () => {
         </h2>
         <div className="bg-[#FEEDEC] p-6 text-lg md:text-xl  ">
           <p className=" mb-2">Salon Address</p>
-          <p className=" mb-6">
-            Flat 1, 276 Old Christchurch Road, Bournemouth BH1 1PH
-          </p>
+          <p className=" mb-6">Bournermouth, United Kingdom</p>
           <p className=" mb-2">Phone Number</p>
-          <p className=" mb-6">+44 7846499337</p>
+          <p className=" mb-6">+4447867873940</p>
           <p className=" mb-2">Email Address</p>
-          <p>hello@funmightbeauty.co.uk</p>
+          <p>info@funmightbeauty.co.uk</p>
         </div>
       </div>
 

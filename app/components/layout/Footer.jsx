@@ -18,7 +18,7 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="col-span-1 flex flex-col items-start">
           <Image src={logo} alt="logo" width={56} height={56} />
-          <h2 className=" font-semibold">FunNight Beauty</h2>
+          <h2 className=" font-semibold">FunMight Beauty</h2>
           <p className="mt-2 text-sm">We bring your beauty to life...</p>
         </div>
 
@@ -46,7 +46,7 @@ export default function Footer() {
           </p>
           <p className="mt-4 ">
             Phone
-            <span className="block text-sm mt-2">+234 6778948399</span>
+            <span className="block text-sm mt-2">+4447867873940</span>
           </p>
         </div>
 
