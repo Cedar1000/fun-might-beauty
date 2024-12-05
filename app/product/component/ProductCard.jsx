@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
   const addToCart = (product) => {
     addItem(product);
 
-    toast.success('Added To Cart!');
+    // toast.success('Added To Cart!');
   };
   return (
     <div className="w-fit ">

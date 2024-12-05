@@ -15,11 +15,15 @@ import { useCart } from '@/context/cartContext';
 const CartPage = () => {
   const router = useRouter();
 
-  const { removeItem } = useCart();
+  const { removeItem, items } = useCart();
 
-  const [cartItems, setCartItems] = useState(
-    JSON.parse(localStorage.getItem('cart')) || []
-  );
+  const [cartItems, setCartItems] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem('cart')) || [];
+    } else {
+      return []; // Empty array for server-side render
+    }
+  });
 
   // Update quantity function
   const updateQuantity = (id, newQuantity) => {
