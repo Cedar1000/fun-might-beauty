@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { banner } from "@/public/images";
-import Nav from "./components/layout/Nav";
-import Button from "./components/element/Button";
-import Service from "./components/sections/Service";
-import Products from "./components/sections/ProductSection";
-import WorkingHours from "./components/sections/WorkHours";
-import Testimonial from "./components/sections/Testimonial";
-import FeaturedGallery from "./components/sections/Gallery";
+import Image from 'next/image';
+import { banner } from '@/public/images';
+import Nav from './components/layout/Nav';
+import Button from './components/element/Button';
+import Service from './components/sections/Service';
+import Products from './components/sections/ProductSection';
+import WorkingHours from './components/sections/WorkHours';
+import Testimonial from './components/sections/Testimonial';
+import FeaturedGallery from './components/sections/Gallery';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="md:flex flex-row-reverse justify-between items-center px-8 py-12 md:pb-0 lg:mx-14 xl:ml-[125px] xl:mr-[125px]">
         <div className="relative  w-72 h-96 md:w-[350px] md:h-[500px] xl:w-[500px] xl:h-[763px]">
-          <Image src={banner} alt="Beauty" layout="fill" className=" " />
+          <Image src={banner} alt="Beauty" width="fill" className=" " />
         </div>
         <div className="mt-5 md:mt-0 self-start">
           <h1 className="text-6xl md:7xl lg:text-8xl xl:text-9xl font-medium text-[#272424]">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const TeamSection = ({ members }) => {
   return (
@@ -7,9 +7,7 @@ const TeamSection = ({ members }) => {
         Meet The Team
       </h2>
       <p className="md:text-center text-primary md:text-2xl mb-12 xl:max-w-[1316px] mx-auto">
-        Meet our talented team of stylists and estheticians. Each member brings
-        unique skills and expertise to our salon, ensuring that you receive the
-        best possible care.
+        This is our hard working team behind the magic.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {members.map((member) => (
@@ -18,12 +16,15 @@ const TeamSection = ({ members }) => {
               <Image
                 src={member.image}
                 alt={member.name}
-                
                 className="object-cover w-40 h-40 md:w-80 md:h-[334px]"
               />
             </div>
-            <h3 className="text-lg md:text-2xl mb-4 ml-24 md:ml-0">{member.name}</h3>
-            <p className="text-sm md:text-normal ml-24 md:ml-0">{member.title}</p>
+            <h3 className="text-lg md:text-2xl mb-4 ml-24 md:ml-0">
+              {member.name}
+            </h3>
+            <p className="text-sm md:text-normal ml-24 md:ml-0">
+              {member.title}
+            </p>
           </div>
         ))}
       </div>
