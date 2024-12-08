@@ -7,9 +7,8 @@ import { workingImage } from '@/public/images';
 
 // import { PopupButton } from 'react-calendly';
 
-import Button from '@/app/components/element/Button';
-
 import Script from 'next/script';
+import BookAppointment from '../element/BookAppointment';
 
 const WorkingHours = ({ className, imageClass, dimension }) => {
   return (
@@ -60,9 +59,7 @@ const WorkingHours = ({ className, imageClass, dimension }) => {
 
           {/* Button */}
           <div className="mt-6 grid justify-items-center ">
-            <Button className="px-6 py-4 font-normal text-base">
-              Book an Appointment
-            </Button>
+            <BookAppointment />
 
             {/* <PopupButton
               url="https://calendly.com/funmightbeauty-info"

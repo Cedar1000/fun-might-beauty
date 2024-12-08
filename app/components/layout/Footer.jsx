@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { logo, instagram, facebook, tiktok } from '@/public/icons';
 import Button from '../element/Button';
 import { usePathname } from 'next/navigation';
+
+import BookAppointment from '../element/BookAppointment';
+
 export default function Footer() {
   const pathname = usePathname();
   const shouldDisplayNavAndFooter =
@@ -84,9 +87,7 @@ export default function Footer() {
             Book your next appointment online, our online booking is fast and
             available 24/7. Book now and get ready to look and feel your best.
           </p>
-          <Button className="px-6 py-4 font-normal text-base text-[#4F4444]">
-            Book an Appointment
-          </Button>
+          <BookAppointment />
         </div>
       </div>
     </footer>

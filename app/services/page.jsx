@@ -2,7 +2,8 @@
 import ServiceCard from './components/ServiceCard';
 import Image from 'next/image';
 import { image, image1, service4 } from '@/public/images';
-import Button from '../components/element/Button';
+
+import BookAppointment from '../components/element/BookAppointment';
 
 const Services = () => {
   const services = [
@@ -83,9 +84,7 @@ const Services = () => {
             and well-tailored salon services designed to bring your personal
             beauty to life.
           </p>
-          <Button className="px-6 py-4 font-normal text-base ">
-            Book an Appointment
-          </Button>
+          <BookAppointment />
         </div>
       </section>
 
