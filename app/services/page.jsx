@@ -1,60 +1,59 @@
-"use client";
-import ServiceCard from "./components/ServiceCard";
-import Image from "next/image";
-import { image, image1, service1, service2, service3, service4 } from "@/public/images";
-import Button from "../components/element/Button";
-
+'use client';
+import ServiceCard from './components/ServiceCard';
+import Image from 'next/image';
+import { image, image1, service4 } from '@/public/images';
+import Button from '../components/element/Button';
 
 const Services = () => {
   const services = [
     {
       image: image,
-      title: "Braiding and Weaving",
+      title: 'Braiding and Weaving',
       description:
-        "There are many braiding and Ghana weaving styles and guess what? We can make them all.",
+        'There are many braiding and Ghana weaving styles and guess what? We can make them all.',
       priceItems: [
-        { label: "Ghana Weaves (Starting from)", price: "£150+" },
-        { label: "Braiding (Starting from)", price: "£150+" },
+        { label: 'Ghana Weaves (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
       ],
     },
     {
       image: image1,
-      title: "Wigging and Installation",
+      title: 'Wigging and Installation',
       description:
-        "There are many frontal and Ghana weaving wigs and guess what? We can create them all.",
+        'There are many frontal and Ghana weaving wigs and guess what? We can create them all.',
       priceItems: [
-        { label: "Wig Installation", price: "£150+" },
-        { label: "Wigging", price: "£150+" },
-        { label: "Hair Resampling", price: "£150+" },
+        { label: 'Wig Installation', price: '£150+' },
+        { label: 'Wigging', price: '£150+' },
+        { label: 'Hair Resampling', price: '£150+' },
       ],
     },
     {
       image: image,
-      title: "Coloring",
+      title: 'Coloring',
       description:
-        "We are experts in various approaches to give you new hair color, highlights, bolder colors, lived-in color, or balayage, with a multi-dimensional color.",
+        'We are experts in various approaches to give you new hair color, highlights, bolder colors, lived-in color, or balayage, with a multi-dimensional color.',
       priceItems: [
-        { label: "Bleaching", price: "£150+" },
-        { label: "Tinting", price: "£150+" },
+        { label: 'Bleaching', price: '£150+' },
+        { label: 'Tinting', price: '£150+' },
       ],
     },
     {
       image: image,
-      title: "Instant Dreads",
+      title: 'Instant Dreads',
       description:
-        "We are able to make any hair type into dreadlocks instantly. Start your loc journey with us.",
+        'We are able to make any hair type into dreadlocks instantly. Start your loc journey with us.',
       priceItems: [
-        { label: "Bleaching", price: "£150+" },
-        { label: "Tinting", price: "£150+" },
+        { label: 'Bleaching', price: '£150+' },
+        { label: 'Tinting', price: '£150+' },
       ],
     },
     {
       image: image1,
-      title: "Jerry Curls and Ponytails",
-      description: "We do trendy curls and ponytails.",
+      title: 'Jerry Curls and Ponytails',
+      description: 'We do trendy curls and ponytails.',
       priceItems: [
-        { label: "Ponytails", price: "£150+" },
-        { label: "Jerry Curls", price: "£150+" },
+        { label: 'Ponytails', price: '£150+' },
+        { label: 'Jerry Curls', price: '£150+' },
       ],
     },
   ];
@@ -63,40 +62,13 @@ const Services = () => {
     <section>
       <section className="bg-white border-b-2 border-[#272424] py-12 md:py-24 lg:py-28 md:px-20 px-9 lg:px-[100px] flex flex-col  lg:flex-row-reverse items-center gap-20 xl:gap-28 md:justify-between">
         {/* Images Section */}
-        <div className=" mt-8 flex-1 xl:flex-none md:mt-0 grid grid-cols-2">
-          <div className="">
-            <Image
-              src={service1}
-              alt="Service 1"
-              width={280}
-              height={234}
-              className="rounded-lg object-cover"
-            />
-          </div>
-          <div className="">
-            <Image
-              src={service2}
-              alt="Service 2"
-              width={280}
-              height={234}
-              className="rounded-lg object-cover"
-            />
-          </div>
-          <div className="">
-            <Image
-              src={service3}
-              alt="Service 3"
-              width={280}
-              height={234}
-              className="rounded-lg object-cover"
-            />
-          </div>
+        <div className=" mt-8 flex-1 xl:flex-none md:mt-0 grid">
           <div className="">
             <Image
               src={service4}
               alt="Service 4"
-              width={280}
-              height={234}
+              width={500}
+              // height={234}
               className="rounded-lg object-cover"
             />
           </div>
@@ -115,7 +87,6 @@ const Services = () => {
             Book an Appointment
           </Button>
         </div>
-
       </section>
 
       <section className="container mx-auto py-12 md:px-20 px-9 lg:px-[100px]">
