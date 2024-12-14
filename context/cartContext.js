@@ -3,6 +3,7 @@
 import { createContext, useState, useEffect, useContext } from 'react';
 
 const CartContext = createContext({
+  count: 0,
   items: [],
   addItem: () => {},
   removeItem: () => {},
@@ -11,11 +12,22 @@ const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const cart = localStorage.getItem('cartItems');
+    const cart = localStorage.getItem('cart');
     if (cart) setItems(JSON.parse(cart));
   }, []);
+
+  useEffect(() => {
+    // Calculate count based on items
+    const cart = localStorage.getItem('cart');
+
+    const items = JSON.parse(cart) || [];
+
+    const newCount = items.reduce((acc, item) => acc + item.quantity, 0);
+    setCount(newCount);
+  }, [items]);
 
   const addItem = (item) => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -85,6 +97,7 @@ export const CartProvider = ({ children }) => {
         clearCart,
         increaseItem,
         decreaseItem,
+        count,
       }}
     >
       {children}

@@ -49,7 +49,7 @@ const AboutUs = () => {
         </div>
         <div className="">
           <h2 className="text-4xl font-bold text-primary mb-4 md:mb-10 lg:mb-[72px] md:text-center  ">
-            Our Mission Here at Funbright
+            Our Mission Here at FunMight
           </h2>
           <p className=" text-primary  md:text-2xl md:ml-6 lg:ml-12 xl:ml-[134px] xl:mr-[146px] ">
             <strong className="text-2xl lg:text-5xl">“</strong>We are dedicated

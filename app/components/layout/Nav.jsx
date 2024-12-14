@@ -1,16 +1,19 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { menu, close, logo, cart, search, profile } from '@/public/icons';
-import Button from '../element/Button';
 import BookAppointment from '../element/BookAppointment';
+
+import { useCart } from '@/context/cartContext';
 
 const Nav = () => {
   const [showSideNav, setShowSideNav] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  const { count } = useCart();
 
   const toggleSideNav = () => {
     setShowSideNav((prev) => !prev);
@@ -74,13 +77,22 @@ const Nav = () => {
         </ul>
         <div className="md:flex items-center gap-4 hidden">
           {isProductRoute && (
-            <div className="flex items-center gap-4">
-              <Image src={search} alt="logo" width={24} height={24} />
-              <Image src={profile} alt="logo" width={24} height={24} />
-              <Link href="/cart">
-                {' '}
-                <Image src={cart} alt="logo" width={24} height={24} />
-              </Link>
+            <div>
+              {count > 0 && (
+                <span className="top-[-10px] text-xs p-[10px] relative top-2 float-right bg-red-500 text-white rounded-full w-4 h-4 flex justify-center items-center">
+                  {' '}
+                  {count}
+                </span>
+              )}
+
+              <div className="flex items-center gap-4">
+                <Image src={search} alt="logo" width={24} height={24} />
+                <Image src={profile} alt="logo" width={24} height={24} />
+
+                <Link href="/cart">
+                  <Image src={cart} alt="logo" width={24} height={24} />
+                </Link>
+              </div>
             </div>
           )}
 
