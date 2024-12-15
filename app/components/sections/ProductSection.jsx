@@ -1,34 +1,34 @@
-import Image from "next/image";
-import Link from "next/link"; 
-import {productImage} from "@/public/images"; 
-import { cartPlus } from "@/public/icons"; 
+import Image from 'next/image';
+import Link from 'next/link';
+import { productImage } from '@/public/images';
+import { cartPlus } from '@/public/icons';
 
 const products = [
   {
     id: 1,
-    name: "Elsa Braid Extension",
-    price: "₦5,800/per pack",
+    name: 'Elsa Braid Extension',
+    price: '£5,800/per pack',
     image: productImage,
     inStock: true,
   },
   {
     id: 2,
-    name: "Elsa Braid Extension",
-    price: "₦5,800/per pack",
+    name: 'Elsa Braid Extension',
+    price: '£5,800/per pack',
     image: productImage,
     inStock: true,
   },
   {
     id: 3,
-    name: "Elsa Braid Extension",
-    price: "₦5,800/per pack",
+    name: 'Elsa Braid Extension',
+    price: '£5,800/per pack',
     image: productImage,
     inStock: true,
   },
   {
     id: 4,
-    name: "Elsa Braid Extension",
-    price: "₦5,800/per pack",
+    name: 'Elsa Braid Extension',
+    price: '£5,800/per pack',
     image: productImage,
     inStock: true,
   },
@@ -85,7 +85,7 @@ const Products = () => {
       {/* Show More Link */}
       <div className="text-end mt-8">
         <Link
-          href="/products"
+          href="/product"
           className="text-lg text-[#272424] pb-1 hover:underline"
         >
           Show More ...

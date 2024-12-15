@@ -1,16 +1,30 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import { cartPlus } from "@/public/icons"; 
-import Modal from "@/app/components/modals/Modal";
-import CartModal from "@/app/components/modals/CartModal";
+import { useState } from 'react';
+import Image from 'next/image';
+import { cartPlus } from '@/public/icons';
+import Modal from '@/app/components/modals/Modal';
+import CartModal from '@/app/components/modals/CartModal';
+
+import { useCart } from '@/context/cartContext';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ProductCard = ({ product }) => {
-   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { addItem } = useCart();
 
-   const handleAddToCartClick = () => {
-     setIsModalOpen(true);
-   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleAddToCartClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const addToCart = (product) => {
+    addItem(product);
+
+    // toast.success('Added To Cart!');
+  };
   return (
     <div className="w-fit ">
       <div className="border border-[#272424] rounded-tr-lg rounded-tl-lg p-2 w-[240px] h-[244px]">
@@ -33,13 +47,24 @@ const ProductCard = ({ product }) => {
           <p className=" text-sm">{product.price}</p>
         </div>
       </div>
-      <button onClick={handleAddToCartClick} className="w-full bg-[#FF938C] py-2 text-[#4F4444] px-4  flex justify-center items-center space-x-2">
+
+      <button
+        onClick={() => addToCart(product)}
+        className="w-full bg-[#FF938C] py-2 text-[#4F4444] px-4  flex justify-center items-center space-x-2"
+      >
         <span> Add to Cart</span>
         <Image src={cartPlus} alt="icon" width={24} height={24} />
       </button>
 
+      <ToastContainer autoClose={true} />
+
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <CartModal image={product.image} title={product.name} quantity={1} onClose={() => setIsModalOpen(false)} />
+        <CartModal
+          image={product.image}
+          title={product.name}
+          quantity={1}
+          onClose={() => setIsModalOpen(false)}
+        />
       </Modal>
     </div>
   );

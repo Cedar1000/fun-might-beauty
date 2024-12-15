@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   hair1,
   hair2,
@@ -6,44 +6,44 @@ import {
   hair4,
   hair5,
   hair6,
-  workingImage,
-} from "@/public/images";
+  hair7,
+} from '@/public/images';
 
 const galleryImages = [
   {
     id: 1,
     src: hair1,
-    alt: "Hairstyle 1",
+    alt: 'Hairstyle 1',
   },
   {
     id: 2,
     src: hair2,
-    alt: "Hairstyle 2",
+    alt: 'Hairstyle 2',
   },
   {
     id: 3,
-    src: workingImage,
-    alt: "Hairstyle 3",
+    src: hair7,
+    alt: 'Hairstyle 3',
   },
   {
     id: 4,
     src: hair4,
-    alt: "Hairstyle 4",
+    alt: 'Hairstyle 4',
   },
   {
     id: 5,
     src: hair5,
-    alt: "Hairstyle 5",
+    alt: 'Hairstyle 5',
   },
   {
     id: 6,
     src: hair6,
-    alt: "Hairstyle 6",
+    alt: 'Hairstyle 6',
   },
   {
     id: 7,
     src: hair3,
-    alt: "Hairstyle 7",
+    alt: 'Hairstyle 7',
   },
 ];
 
@@ -66,7 +66,7 @@ const FeaturedGallery = () => {
             <div
               key={image.id}
               className="relative"
-              style={{ height: "350px" }}
+              style={{ height: '350px' }}
             >
               <Image
                 src={image.src}

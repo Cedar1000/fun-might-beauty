@@ -6,8 +6,8 @@ const CategoryTabs = ({ categories, selectedCategory, onSelectCategory }) => {
           key={category}
           className={`px-4 py-2 border border-[#272424] rounded text-sm font-medium ${
             selectedCategory === category
-              ? "bg-[#FF938C] text-white border-0"
-              : " text-[#4F4444]"
+              ? 'bg-[#FF938C] text-white border-0'
+              : ' text-[#4F4444]'
           }`}
           onClick={() => onSelectCategory(category)}
         >

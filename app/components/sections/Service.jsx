@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { image1, image2, image3, image4 } from "@/public/images";
+import Image from 'next/image';
+import { image1, image2, image3, image4 } from '@/public/images';
 
 const Service = () => {
   return (
@@ -16,7 +16,7 @@ const Service = () => {
               <h3 className="text-2xl font-medium mt-4 w-[169px]">
                 Instant Dreadlocks
               </h3>
-              <p className="text-gray-600 mt-2 text-xl">
+              <p className="text-gray-600 mt-2 text-x sm:text-xl">
                 We can make instant dreadlocks for any and every hair type.
               </p>
             </div>
@@ -40,7 +40,7 @@ const Service = () => {
               <h3 className="text-2xl font-medium mt-4 w-[169px]">
                 Wig Insallation
               </h3>
-              <p className="text-gray-600 text-xl">
+              <p className="text-gray-600 text-x sm:text-xl">
                 We create custom made wigs and fit them just how you like
               </p>
             </div>
@@ -51,7 +51,7 @@ const Service = () => {
           <div className="flex items-stretch h-[287px]">
             <div className="bg-[#FFF3F2] pl-3 pt-14 pb-12 rounded-bl-[52px] rounded-br-[52px] w-[230px] shadow-lg flex flex-col justify-between">
               <h3 className="text-2xl font-medium mt-4 w-[169px]">Braiding</h3>
-              <p className="text-gray-600 mt-2 text-xl">
+              <p className="text-gray-600 mt-2 text-x sm:text-xl">
                 There are many braiding styles and options and guess what we can
                 make them all
               </p>
@@ -76,7 +76,7 @@ const Service = () => {
               <h3 className="text-2xl font-medium mt-4 w-[146px]">
                 Wig Coloring
               </h3>
-              <p className="text-gray-600 text-xl">
+              <p className="text-gray-600 text-x sm:text-xl">
                 We bleach and tint wigs for different looks. Can also be custom
                 made.
               </p>

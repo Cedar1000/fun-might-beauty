@@ -1,37 +1,31 @@
-import React from 'react'
-import Image from "next/image";
-import { image1, image2, image3, image4, team1, team2 } from "@/public/images";
+import React from 'react';
+import Image from 'next/image';
+import { image1, image2, image3, image4, team1 } from '@/public/images';
 import WorkingHours from '../components/sections/WorkHours';
 import TeamSection from './components/TeamSection';
 import ValuesSection from './components/ValueSection';
 import LocationSection from './components/LocationSection';
 
 const AboutUs = () => {
-   const teamMembers = [
-     {
-       id: 1,
-       name: "Miss Funbright",
-       title: "CEO and Head Stylist",
-       image: team1,
-     },
-     {
-       id: 2,
-       name: "Miss Funbright",
-       title: "CEO and Head Stylist",
-       image: team2,
-     },
-   ];
+  const teamMembers = [
+    {
+      id: 1,
+      name: 'Funmilayo Adekunjo',
+      title: 'CEO and Head Stylist',
+      image: team1,
+    },
+  ];
 
-   const coreValues = [
-     "Customer Satisfaction",
-     "Creativity",
-     "Quality",
-     "Inclusivity",
-     "Passion",
-     "Integrity",
-     "Professionalism",
-     "Innovation",
-   ];
+  const coreValues = [
+    'Customer Satisfaction',
+    'Creativity',
+    'Quality',
+    'Inclusivity',
+    'Passion',
+    'Integrity',
+    'Professionalism',
+    'Innovation',
+  ];
   return (
     <div className="">
       <section className="bg-white border-b-2 border-[#272424] py-12 md:py-24 lg:py-28 md:px-20 px-9 lg:px-[100px] text-center">
@@ -55,7 +49,7 @@ const AboutUs = () => {
         </div>
         <div className="">
           <h2 className="text-4xl font-bold text-primary mb-4 md:mb-10 lg:mb-[72px] md:text-center  ">
-            Our Mission Here at Funbright
+            Our Mission Here at FunMight
           </h2>
           <p className=" text-primary  md:text-2xl md:ml-6 lg:ml-12 xl:ml-[134px] xl:mr-[146px] ">
             <strong className="text-2xl lg:text-5xl">“</strong>We are dedicated
@@ -168,6 +162,6 @@ const AboutUs = () => {
       <LocationSection />
     </div>
   );
-}
+};
 
-export default AboutUs
+export default AboutUs;

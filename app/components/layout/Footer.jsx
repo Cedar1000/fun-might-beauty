@@ -1,24 +1,27 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { logo, instagram, facebook, tiktok } from "@/public/icons";
-import Button from "../element/Button";
-import { usePathname } from "next/navigation";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { logo, instagram, facebook, tiktok } from '@/public/icons';
+import Button from '../element/Button';
+import { usePathname } from 'next/navigation';
+
+import BookAppointment from '../element/BookAppointment';
+
 export default function Footer() {
-    const pathname = usePathname();
-    const shouldDisplayNavAndFooter =
-      pathname.startsWith("/signin") || pathname.startsWith("/signup");
+  const pathname = usePathname();
+  const shouldDisplayNavAndFooter =
+    pathname.startsWith('/signin') || pathname.startsWith('/signup');
   return (
     <footer
       className={`bg-[#232121] text-[#FFF3F2] py-[47px] md:px-9 px-4 lg:px-[100px] ${
-        shouldDisplayNavAndFooter ? "hidden" : ""
+        shouldDisplayNavAndFooter ? 'hidden' : ''
       }`}
     >
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-10 lg:gap-20 xl:gap-[86px] items-center">
         {/* Logo and Description */}
         <div className="col-span-1 flex flex-col items-start">
           <Image src={logo} alt="logo" width={56} height={56} />
-          <h2 className=" font-semibold">FunNight Beauty</h2>
+          <h2 className=" font-semibold">FunMight Beauty</h2>
           <p className="mt-2 text-sm">We bring your beauty to life...</p>
         </div>
 
@@ -40,11 +43,13 @@ export default function Footer() {
           </div>
           <p className="mt-4 ">
             Email
-            <span className="block text-sm mt-2">funbnight@gmail.com</span>
+            <span className="block text-sm mt-2">
+              info@funmightbeauty.co.uk
+            </span>
           </p>
           <p className="mt-4 ">
             Phone
-            <span className="block text-sm mt-2">+234 6778948399</span>
+            <span className="block text-sm mt-2">+4447867873940</span>
           </p>
         </div>
 
@@ -82,9 +87,7 @@ export default function Footer() {
             Book your next appointment online, our online booking is fast and
             available 24/7. Book now and get ready to look and feel your best.
           </p>
-          <Button className="px-6 py-4 font-normal text-base text-[#4F4444]">
-            Book an Appointment
-          </Button>
+          <BookAppointment />
         </div>
       </div>
     </footer>
