@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { image1, image2, image3, image4 } from '@/public/images';
+import { image1, image2, hair7, ponytail, frontal } from '@/public/images';
 
 const Service = () => {
   return (
@@ -13,16 +13,14 @@ const Service = () => {
         <aside className="z-10 lg:ml-9">
           <div className="flex items-stretch h-[287px]">
             <div className="bg-[#FFF3F2] pl-3 pt-14 pb-12 rounded-tl-[52px] w-[230px] rounded-br-[52px] shadow-lg flex flex-col justify-between">
-              <h3 className="text-2xl font-medium mt-4 w-[169px]">
-                Instant Dreadlocks
-              </h3>
+              <h3 className="text-2xl font-medium mt-4 w-[169px]">Frontal</h3>
               <p className="text-gray-600 mt-2 text-x sm:text-xl">
-                We can make instant dreadlocks for any and every hair type.
+                We can make frontals for any and every hair type.
               </p>
             </div>
             <Image
-              src={image1}
-              alt="Instant Dreadlocks"
+              src={frontal}
+              alt="frontal"
               width={500}
               height={500}
               className="rounded-bl-[52px] rounded-br-[52px] w-[200px] md:w-[230px] object-cover"
@@ -30,18 +28,18 @@ const Service = () => {
           </div>
           <div className="flex items-stretch h-[287px]">
             <Image
-              src={image3}
-              alt="Wig Insallation"
+              src={image2}
+              alt="Short boho knotless braid"
               width={500}
               height={500}
               className=" rounded-tr-[52px] w-[230px] object-cover"
             />
             <div className="bg-[#FFF3F2] md:pl-3 pr-2 pt-14 pb-12 rounded-tl-[52px] rounded-tr-[52px] w-[200px] md:w-[230px]  shadow-lg flex flex-col justify-between">
-              <h3 className="text-2xl font-medium mt-4 w-[169px]">
-                Wig Insallation
+              <h3 className="text-2xl font-medium mt-4 w-[169px] px-4">
+                Short boho knotless braid
               </h3>
-              <p className="text-gray-600 text-x sm:text-xl">
-                We create custom made wigs and fit them just how you like
+              <p className="text-gray-600 text-x sm:text-xl px-4">
+                We do Short boho knotless braid just how you like
               </p>
             </div>
           </div>
@@ -50,15 +48,15 @@ const Service = () => {
         <aside className="z-10">
           <div className="flex items-stretch h-[287px]">
             <div className="bg-[#FFF3F2] pl-3 pt-14 pb-12 rounded-bl-[52px] rounded-br-[52px] w-[230px] shadow-lg flex flex-col justify-between">
-              <h3 className="text-2xl font-medium mt-4 w-[169px]">Braiding</h3>
+              <h3 className="text-2xl font-medium mt-4 w-[169px]">Pony Tail</h3>
               <p className="text-gray-600 mt-2 text-x sm:text-xl">
-                There are many braiding styles and options and guess what we can
-                make them all
+                We can make Pony Tail just how you like it! to give you that
+                extra spark!
               </p>
             </div>
             <Image
-              src={image2}
-              alt="Braiding"
+              src={ponytail}
+              alt="ponytail"
               width={500}
               height={500}
               className="rounded-bl-[52px] rounded-tr-[52px] w-[200px] md:w-[230px] object-cover"
@@ -66,7 +64,7 @@ const Service = () => {
           </div>
           <div className="flex items-stretch h-[287px]">
             <Image
-              src={image4}
+              src={hair7}
               alt="Wig Coloring"
               width={500}
               height={500}
@@ -74,11 +72,10 @@ const Service = () => {
             />
             <div className="bg-[#FFF3F2] pl-3 pr-2 pt-14 pb-12 rounded-tl-[52px] w-[230px]  shadow-lg flex flex-col justify-between">
               <h3 className="text-2xl font-medium mt-4 w-[146px]">
-                Wig Coloring
+                Instant Dreadlock
               </h3>
               <p className="text-gray-600 text-x sm:text-xl">
-                We bleach and tint wigs for different looks. Can also be custom
-                made.
+                We can make instant dreadlocks for any and every hair type.
               </p>
             </div>
           </div>

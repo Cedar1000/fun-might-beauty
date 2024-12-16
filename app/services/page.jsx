@@ -3,7 +3,17 @@ import ServiceCard from './components/ServiceCard';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-import { service4, kinkybraide, bigGhanaWeaving } from '@/public/images';
+import {
+  hair2,
+  hair3,
+  hair7,
+  image4,
+  frontal,
+  ponytail,
+  service4,
+  kinkybraide,
+  bigGhanaWeaving,
+} from '@/public/images';
 
 const BookAppointment = dynamic(
   () => import('../components/element/BookAppointment'),
@@ -33,6 +43,72 @@ const Services = () => {
         { label: 'Wig Installation', price: '£150+' },
         { label: 'Wigging', price: '£150+' },
         { label: 'Hair Resampling', price: '£150+' },
+      ],
+    },
+
+    {
+      image: frontal,
+      title: 'Frontal',
+      description:
+        'We make the best frontals styles to give you that spark you are looking for!.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: ponytail,
+      title: 'Pony Tail',
+      description:
+        'We can make Pony Tail just how you like it! to give you that extra spark!',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: hair7,
+      title: 'Instant Dreadlock',
+      description:
+        'We can make instant dreadlocks for any and every hair type.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: hair2,
+      title: 'Crochet',
+      description:
+        'Crochet braids are a versatile and stylish protective hairstyle. Our skilled stylists can create a variety of looks, from simple to intricate, to suit your personal style.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: hair3,
+      title: 'Artificial Dread',
+      description:
+        'Artificial dreadlocks offer a low-maintenance, edgy look. Our stylists can create natural-looking dreadlocks in various lengths, colors, and textures.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: image4,
+      title: 'Cornrow Hairstyle',
+      description:
+        'Cornrow hairstyles are a classic protective style that can be customized to suit any occasion. Our expert braiders can create intricate patterns and designs.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
       ],
     },
   ];
