@@ -3,13 +3,7 @@ import ServiceCard from './components/ServiceCard';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-import {
-  image,
-  image1,
-  service4,
-  kinkybraide,
-  bigGhanaWeaving,
-} from '@/public/images';
+import { service4, kinkybraide, bigGhanaWeaving } from '@/public/images';
 
 const BookAppointment = dynamic(
   () => import('../components/element/BookAppointment'),
