@@ -7,11 +7,14 @@ import { PopupButton } from 'react-calendly';
 import { useEffect, useState } from 'react';
 
 const BookAppointment = () => {
-  const [rootElement, setRootElement] = useState(null);
+  const [rootElement, setRootElement] = useState(
+    document.getElementById('__next')
+  );
 
   useEffect(() => {
     // Wait for the component to be mounted before setting the rootElement
     if (typeof window !== 'undefined') {
+      console.log({ el: document.getElementById('__next') });
       setRootElement(document.getElementById('__next'));
     }
   }, []);

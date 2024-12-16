@@ -1,17 +1,24 @@
 'use client';
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { menu, close, logo, cart, search, profile } from '@/public/icons';
-import BookAppointment from '../element/BookAppointment';
 
 import { useCart } from '@/context/cartContext';
+
+const BookAppointment = dynamic(
+  () => import('../element/BookAppointment.jsx'),
+  {
+    ssr: false,
+  }
+);
 
 const Nav = () => {
   const [showSideNav, setShowSideNav] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   const { count } = useCart();
 
@@ -102,6 +109,7 @@ const Nav = () => {
             } font-normal text-base`}
           >
             <BookAppointment />
+            <div id="__next"></div>
           </div>
         </div>
 
@@ -175,7 +183,10 @@ const Nav = () => {
                 <Link href="/product">Product</Link>
               </li>
             </ul>
-            <BookAppointment />
+
+            <div id="__next">
+              <BookAppointment />
+            </div>
           </div>
         </div>
       )}
