@@ -26,9 +26,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${notoSerif.variable} ${openSans.variable} antialiased`}
-      >
+      <body className={` antialiased`}>
+        {/* ${notoSerif.variable} ${openSans.variable} */}
         <CartProvider>
           <ClientLayout>
             <Nav />

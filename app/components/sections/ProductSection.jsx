@@ -6,6 +6,7 @@ import axios from "@/utils/axios";
 import { cartPlus } from "@/public/icons";
 import { useCart } from "@/context/cartContext";
 import { useState } from "react";
+import { intlMoneyFormat } from "@/utils/helpers";
 
 // Fetch products dynamically
 const fetchProducts = async () => {
@@ -114,7 +115,7 @@ const Products = () => {
                   {/* Product Details */}
                   <h3 className="text-xl mt-4">{product.name}</h3>
                   <div className="flex justify-between items-center">
-                    <p className="text-[#272424] mt-2">{product.price}</p>
+                    <p className="text-[#272424] mt-2">{intlMoneyFormat(product.price)}</p>
                     {/* Order Button */}
                     <button
                       onClick={() => addToCart(product)}
