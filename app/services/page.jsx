@@ -1,15 +1,32 @@
 'use client';
 import ServiceCard from './components/ServiceCard';
 import Image from 'next/image';
-import { image, image1, service4 } from '@/public/images';
+import dynamic from 'next/dynamic';
 
-import BookAppointment from '../components/element/BookAppointment';
+import {
+  hair2,
+  hair3,
+  hair7,
+  image4,
+  frontal,
+  ponytail,
+  service4,
+  kinkybraide,
+  bigGhanaWeaving,
+} from '@/public/images';
+
+const BookAppointment = dynamic(
+  () => import('../components/element/BookAppointment'),
+  {
+    ssr: false,
+  }
+);
 
 const Services = () => {
   const services = [
     {
-      image: image,
-      title: 'Braiding and Weaving',
+      image: kinkybraide,
+      title: 'Kinky Braid',
       description:
         'There are many braiding and Ghana weaving styles and guess what? We can make them all.',
       priceItems: [
@@ -18,8 +35,8 @@ const Services = () => {
       ],
     },
     {
-      image: image1,
-      title: 'Wigging and Installation',
+      image: bigGhanaWeaving,
+      title: 'Big Ghana Weaving',
       description:
         'There are many frontal and Ghana weaving wigs and guess what? We can create them all.',
       priceItems: [
@@ -28,33 +45,70 @@ const Services = () => {
         { label: 'Hair Resampling', price: '£150+' },
       ],
     },
+
     {
-      image: image,
-      title: 'Coloring',
+      image: frontal,
+      title: 'Frontal',
       description:
-        'We are experts in various approaches to give you new hair color, highlights, bolder colors, lived-in color, or balayage, with a multi-dimensional color.',
+        'We make the best frontals styles to give you that spark you are looking for!.',
       priceItems: [
-        { label: 'Bleaching', price: '£150+' },
-        { label: 'Tinting', price: '£150+' },
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
       ],
     },
+
     {
-      image: image,
-      title: 'Instant Dreads',
+      image: ponytail,
+      title: 'Pony Tail',
       description:
-        'We are able to make any hair type into dreadlocks instantly. Start your loc journey with us.',
+        'We can make Pony Tail just how you like it! to give you that extra spark!',
       priceItems: [
-        { label: 'Bleaching', price: '£150+' },
-        { label: 'Tinting', price: '£150+' },
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
       ],
     },
+
     {
-      image: image1,
-      title: 'Jerry Curls and Ponytails',
-      description: 'We do trendy curls and ponytails.',
+      image: hair7,
+      title: 'Instant Dreadlock',
+      description:
+        'We can make instant dreadlocks for any and every hair type.',
       priceItems: [
-        { label: 'Ponytails', price: '£150+' },
-        { label: 'Jerry Curls', price: '£150+' },
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: hair2,
+      title: 'Crochet',
+      description:
+        'Crochet braids are a versatile and stylish protective hairstyle. Our skilled stylists can create a variety of looks, from simple to intricate, to suit your personal style.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: hair3,
+      title: 'Artificial Dread',
+      description:
+        'Artificial dreadlocks offer a low-maintenance, edgy look. Our stylists can create natural-looking dreadlocks in various lengths, colors, and textures.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
+      ],
+    },
+
+    {
+      image: image4,
+      title: 'Cornrow Hairstyle',
+      description:
+        'Cornrow hairstyles are a classic protective style that can be customized to suit any occasion. Our expert braiders can create intricate patterns and designs.',
+      priceItems: [
+        { label: 'Frontal (Starting from)', price: '£150+' },
+        { label: 'Braiding (Starting from)', price: '£150+' },
       ],
     },
   ];
@@ -85,6 +139,8 @@ const Services = () => {
             beauty to life.
           </p>
           <BookAppointment />
+
+          <div id="__next"></div>
         </div>
       </section>
 

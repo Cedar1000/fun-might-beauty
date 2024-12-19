@@ -20,6 +20,10 @@ import service3 from './service3.png';
 import service4 from './service4.png';
 import team1 from './team1.jpg';
 import team2 from './team2.png';
+import ponytail from './pony-tail.jpg';
+import frontal from './frontal.jpg';
+import kinkybraide from './kinkybraide.jpg';
+import bigGhanaWeaving from './big-ghana-weaving.jpg';
 
 export {
   banner,
@@ -27,6 +31,8 @@ export {
   image2,
   image3,
   image4,
+  frontal,
+  ponytail,
   productImage,
   workingImage,
   icon,
@@ -44,4 +50,6 @@ export {
   service4,
   team1,
   team2,
+  kinkybraide,
+  bigGhanaWeaving,
 };
