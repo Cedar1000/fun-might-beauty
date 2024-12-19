@@ -36,7 +36,7 @@ const CartItem = ({ item, updateQuantity, deleteItem }) => {
         <div className="flex items-center">
           <div className="bg-[#FEEDEC]">
             <Image
-              src={item.image}
+              src={item.images?.[0]?.url}
               alt={item.name}
               width={64}
               height={140}

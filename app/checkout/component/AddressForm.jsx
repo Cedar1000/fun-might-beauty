@@ -4,20 +4,8 @@ import InputField from "@/app/components/element/InputField";
 import { useState, useCallback } from "react";
 
 
-const AddressForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    countryCode: "+91", 
-    phoneNumber: "",
-    address: "",
-    flatNo: "",
-    city: "",
-    state: "",
-    postalCode: "",
-    landmark: "",
-  });
+const AddressForm = ({ formData, setFormData }) => {
+
 
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -142,10 +130,10 @@ const AddressForm = () => {
         </div>
       </div>
 
-      <div className="flex items-center">
+      {/* <div className="flex items-center">
         <input type="checkbox" className="mr-2" id="save-info" />
         <label htmlFor="save-info">Save this information for next time</label>
-      </div>
+      </div> */}
     </div>
   );
 };

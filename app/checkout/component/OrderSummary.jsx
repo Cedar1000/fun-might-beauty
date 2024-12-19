@@ -3,15 +3,12 @@
 import { useState, useEffect } from "react";
 import moment from "moment";
 import { intlMoneyFormat } from "@/utils/helpers";
-const OrderSummary = () => {
-  const [summary, setSummary] = useState({
-    price: 500,
-    discount: 0,
-    shipping: 10,
-    coupon: 5,
-    total: 510,
-    deliveryDate: "2024-02-01",
-  });
+const OrderSummary = ({ summary, setSummary, onClick }) => {
+  //  const [summary, setSummary] = useState(initialSummary);
+  
+
+
+  
 
   useEffect(() => {
     const calculateTotal = () => {
@@ -59,7 +56,7 @@ const OrderSummary = () => {
 
       {/* Estimated Delivery Date */}
       <div className="flex justify-between mb-4 mt-6">
-        <span>Estimated Delivery by:</span>
+        <span>Date:</span>
         <span>{moment(summary.deliveryDate).format("DD MMM, YYYY")}</span>
       </div>
 
@@ -71,8 +68,8 @@ const OrderSummary = () => {
       />
 
       {/* Continue to Payment Button */}
-      <button className="mt-4 px-6 py-2 w-full bg-[#FDCCA1] text-primary border border-primary font-bold rounded hover:bg-opacity-50">
-        Continue to Payment
+      <button onClick={onClick} className="mt-4 px-6 py-2 w-full bg-[#FDCCA1] text-primary border border-primary font-bold rounded hover:bg-opacity-50">
+        Place Order
       </button>
     </div>
   );
