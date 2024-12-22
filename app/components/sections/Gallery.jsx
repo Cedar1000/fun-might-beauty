@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import {
   hair1,
-  hair2,
+  image,
+  image3,
   hair3,
   hair4,
   hair5,
-  hair6,
-  hair7,
+  hair8,
+  hair9,
 } from '@/public/images';
 
 const galleryImages = [
@@ -17,17 +18,17 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: hair2,
+    src: image,
     alt: 'Hairstyle 2',
   },
   {
     id: 3,
-    src: hair7,
+    src: hair8,
     alt: 'Hairstyle 3',
   },
   {
     id: 4,
-    src: hair4,
+    src: hair9,
     alt: 'Hairstyle 4',
   },
   {
@@ -37,7 +38,7 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: hair6,
+    src: image3,
     alt: 'Hairstyle 6',
   },
   {
