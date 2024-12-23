@@ -18,6 +18,11 @@ const BookAppointment = dynamic(
 );
 
 const Nav = () => {
+  const router = useRouter();
+   const handleLogoClick = () => {
+    router.replace("/"); 
+    window.location.href = "/";
+   };
   const [showSideNav, setShowSideNav] = useState(false);
    const [showSearchModal, setShowSearchModal] = useState(false);
   const pathname = usePathname();
@@ -43,10 +48,10 @@ const Nav = () => {
           isProductRoute ? "py-4" : "p-4"
         } `}
       >
-        <div>
-          <Link href={`/`}>
+        <div className="cursor-pointer" onClick={handleLogoClick}>
+        
             <Image src={logo} alt="logo" width={56} height={56} />
-          </Link>
+          
         </div>
 
         <ul className="hidden lg:flex items-center gap-4">
