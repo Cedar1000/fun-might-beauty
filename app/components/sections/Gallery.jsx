@@ -4,13 +4,14 @@ import React from "react";
 import { Image as AntImage } from "antd";
 import {
   hair1,
-  hair2,
+  image,
+  image3,
   hair3,
   hair4,
   hair5,
-  hair6,
-  hair7,
-} from "@/public/images";
+  hair8,
+  hair9,
+} from '@/public/images';
 
 const galleryImages = [
   {
@@ -20,18 +21,18 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "/images/hair2.jpg",
-    alt: "Hairstyle 2",
+    src: image,
+    alt: 'Hairstyle 2',
   },
   {
     id: 3,
-    src: "/images/hair7.jpg",
-    alt: "Hairstyle 3",
+    src: hair8,
+    alt: 'Hairstyle 3',
   },
   {
     id: 4,
-    src: "/images/hair4.jpg",
-    alt: "Hairstyle 4",
+    src: hair9,
+    alt: 'Hairstyle 4',
   },
   {
     id: 5,
@@ -40,8 +41,8 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: "/images/hair6.jpg",
-    alt: "Hairstyle 6",
+    src: image3,
+    alt: 'Hairstyle 6',
   },
   {
     id: 7,
