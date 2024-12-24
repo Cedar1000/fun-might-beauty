@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Image as AntImage } from "antd";
+import React from 'react';
+import { Image as AntImage } from 'antd';
 import {
   hair1,
   image,
@@ -16,38 +16,38 @@ import {
 const galleryImages = [
   {
     id: 1,
-    src: "/images/hair1.jpg",
-    alt: "Hairstyle 1",
+    src: '/images/hair1.jpg',
+    alt: 'Hairstyle 1',
   },
   {
     id: 2,
-    src: image,
+    src: '/images/image.png',
     alt: 'Hairstyle 2',
   },
   {
     id: 3,
-    src: hair8,
+    src: '/images/hair8.jpg',
     alt: 'Hairstyle 3',
   },
   {
     id: 4,
-    src: hair9,
+    src: '/images/hair9.jpg',
     alt: 'Hairstyle 4',
   },
   {
     id: 5,
-    src: "/images/hair5.jpg",
-    alt: "Hairstyle 5",
+    src: '/images/hair5.jpg',
+    alt: 'Hairstyle 5',
   },
   {
     id: 6,
-    src: image3,
+    src: '/images/image3.jpg',
     alt: 'Hairstyle 6',
   },
   {
     id: 7,
-    src: "/images/hair3.jpg",
-    alt: "Hairstyle 7",
+    src: '/images/hair3.jpg',
+    alt: 'Hairstyle 7',
   },
 ];
 
@@ -123,7 +123,7 @@ const FeaturedGallery = () => {
               alt={image.alt}
               width={350}
               height={350}
-              className="transition-transform duration-300 transform group-hover:scale-110 cursor-pointer rounded-lg"
+              className="transition-transform object-cover duration-300 transform group-hover:scale-110 cursor-pointer rounded-lg"
             />
           ))}
         </AntImage.PreviewGroup>
